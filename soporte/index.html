@@ -1,0 +1,133 @@
+<!doctype html>
+<!--
+  The App Store's "Support URL" (App Store Connect › App Information):
+  https://pronuncia.site/soporte. Plain text, no script, like the privacy
+  policy. Keep the steps in step with the app's own labels.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Ayuda con Pronuncia: entrar, la prueba gratis, cancelar la suscripción, borrar tu cuenta y cómo escribirnos.">
+<title>Soporte · Pronuncia</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1, h2 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-heading-weight);
+    line-height: 1.2;
+    margin: 0;
+  }
+  h1 { font-size: clamp(30px, 7vw, 40px); margin: 8px 0 16px; }
+  h2 { font-size: 21px; margin: 36px 0 10px; }
+  p, ul, ol { margin: 0 0 12px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--color-accent-700); text-underline-offset: 2px; }
+  .muted { color: var(--ink-muted); }
+  .contact {
+    background: var(--color-raised);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 18px;
+    margin: 8px 0 8px;
+    font-size: 17px;
+  }
+  footer { margin-top: 48px; color: var(--ink-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+
+<p class="muted" style="margin:0">Pronuncia</p>
+<h1>Soporte</h1>
+
+<div class="contact">
+  ¿Algo no va bien o tienes una pregunta? Escríbenos a
+  <a href="mailto:hola@pronuncia.site"><b>hola@pronuncia.site</b></a>
+  desde el correo de tu cuenta y te respondemos lo antes posible.
+</div>
+
+<h2>No me llega el código para entrar</h2>
+<ul>
+  <li>Mira en la carpeta de spam o de promociones.</li>
+  <li>Comprueba que escribiste bien tu correo; si no, toca <b>Usar otro correo</b>.</li>
+  <li>Espera un minuto y toca <b>Reenviar código</b>.</li>
+</ul>
+
+<h2>La prueba gratis</h2>
+<p>
+  Pro tiene 7 días de prueba gratis, que puedes empezar durante las dos
+  primeras semanas de tu cuenta. Te pedimos una tarjeta (en iPhone, tu cuenta
+  de Apple) al empezar; si cancelas antes de que acaben los 7 días, no se te
+  cobra nada. Si no cancelas, Pro cuesta 2,99 € al mes y se renueva cada mes.
+  Después de esas dos semanas, Pro se paga desde el primer día.
+</p>
+
+<h2>Mensual o anual</h2>
+<p>
+  Al suscribirte eliges cómo pagar Pro. <b>Mensual:</b> 2,99 € al mes, con la
+  prueba gratis de arriba. <b>Anual:</b> 30 € al año, que sale más barato que
+  doce meses; no tiene prueba gratis, se cobra el día que te suscribes y se
+  renueva cada año. Fuera de la UE, en la web, son 2,99 $ y 30 $; en iPhone,
+  el precio que muestre el App Store en tu país. Puedes cancelar cualquiera de
+  las dos cuando quieras.
+</p>
+
+<!-- Rewarded videos arrive in 1.1 (docs/DEPLOY.md §8). Restore this section then:
+<h2>Vídeos para conseguir un intento más (iPhone)</h2>
+<p>
+  Con el plan Standard tienes 5 transcripciones y 5 grabaciones al día. En la
+  app de iPhone, cuando las gastas, puedes ver un vídeo corto de publicidad y
+  conseguir un intento más, hasta 5 vídeos al día. Solo cuenta si lo ves hasta
+  el final. Los vídeos son de Google y no se personalizan con tus datos; puedes
+  cambiar tu permiso en <b>Perfil › Privacidad de los anuncios</b>. Pro no
+  tiene anuncios.
+</p>
+
+-->
+
+<h2>Cancelar la suscripción (cuando quieras)</h2>
+<ul>
+  <li><b>En iPhone:</b> Ajustes › tu nombre › Suscripciones › Pronuncia Pro › Cancelar suscripción. También desde la app: <b>Perfil › Suscripción › Gestionar en App Store</b>.</li>
+  <li><b>En la web:</b> <b>Perfil › Suscripción › Cancelar suscripción</b>, que abre la página de Stripe.</li>
+</ul>
+<p>Mantienes Pro hasta el final del periodo que ya pagaste (el mes o el año, o la prueba) y no se te vuelve a cobrar.</p>
+
+<h2>Recuperar mi Pro en otro iPhone</h2>
+<p>Entra con el mismo correo y toca <b>Perfil › Suscripción › Restaurar compras</b>.</p>
+
+<h2>Borrar mi cuenta</h2>
+<p>
+  En la app: <b>Perfil › Borrar mi cuenta</b>. Se borran tu perfil, tu
+  progreso y tus datos de nuestro servidor. Si pagas en el App Store, cancela
+  también la suscripción en Ajustes: borrar la cuenta no la cancela. Si no
+  puedes entrar, pídenos el borrado en
+  <a href="mailto:hola@pronuncia.site">hola@pronuncia.site</a>.
+</p>
+
+<h2>Privacidad</h2>
+<p>Qué datos tratamos y cómo decidir sobre ellos: <a href="../privacidad/">Política de privacidad</a>.</p>
+
+<footer>
+  <p>Pronuncia · <a href="https://pronuncia.site">pronuncia.site</a> · <a href="mailto:hola@pronuncia.site">hola@pronuncia.site</a></p>
+  <p>© 2026 Pronuncia, todos los derechos reservados.</p>
+</footer>
+
+</main>
+</body>
+</html>

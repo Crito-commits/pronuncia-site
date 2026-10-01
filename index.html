@@ -1,0 +1,73 @@
+<!doctype html>
+<!--
+  The home page of https://pronuncia.site, published with the privacy policy
+  and the support page by ./publish-site.sh (GitHub Pages, repo
+  Crito-commits/pronuncia-site). Plain text, no script, like those two.
+  The app itself is the iPhone app; the web app is not on this site.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Pronuncia: aprende a pronunciar inglés leyéndolo con letras españolas. App para iPhone.">
+<title>Pronuncia</title>
+<link rel="stylesheet" href="css/tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  main { max-width: 620px; margin: 0 auto; padding: 56px 16px 64px; display: flex; flex-direction: column; gap: 20px; }
+  h1 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-heading-weight);
+    font-size: clamp(40px, 10vw, 60px);
+    line-height: 1.05;
+    margin: 0;
+  }
+  p { margin: 0; }
+  .lede { font-size: 20px; }
+  .example {
+    background: var(--color-raised);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 18px;
+  }
+  .example b { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 22px; display: block; }
+  .example .say { color: var(--color-accent-700); font-size: 22px; font-weight: 600; }
+  .muted { color: var(--ink-muted); }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  a { color: var(--color-accent-700); text-underline-offset: 2px; }
+  footer { margin-top: 28px; color: var(--ink-muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Pronuncia</h1>
+  <p class="lede">Lee en español, suena en inglés. Cada frase en inglés viene escrita con letras españolas, con su traducción, y te puntúa cuando la dices en voz alta.</p>
+  <div class="example">
+    <b>Thank you very much</b>
+    <span class="say">thanc yu VÉR-i mach</span>
+    <p class="muted">Muchas gracias</p>
+  </div>
+  <p>Pronuncia es una app para iPhone. Muy pronto en la App Store.</p>
+  <nav>
+    <a href="soporte/">Soporte</a>
+    <a href="privacidad/">Política de privacidad</a>
+    <span>hola@pronuncia.site</span>
+  </nav>
+  <footer>
+    <p>© 2026 Pronuncia, todos los derechos reservados.</p>
+  </footer>
+</main>
+</body>
+</html>

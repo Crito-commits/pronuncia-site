@@ -1,0 +1,247 @@
+/* Organic — design-system tokens, carried over from Pronuncia v2.
+   Light theme is the v2 palette verbatim; dark theme is a re-derivation of the
+   same ramps on a dark ground, so both themes share one visual value scale. */
+
+@font-face {
+  font-family: 'Caprasimo'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/caprasimo-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Caprasimo'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/caprasimo-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Figtree'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url("../fonts/figtree-latin-ext.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Figtree'; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url("../fonts/figtree-latin.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* Organic — the v2 palette, restored. Cream ground, rust action, olive
+     support. Gold and Cadencia's coat are the only additions: milestones
+     and the mascot arrived after this palette did and need colours of
+     their own, so they are built in the same warm register. */
+  --color-bg: #f5ead8;
+  --color-surface: #ebddc5;
+  --color-raised: #f9f4ed;
+  --color-text: #201e1d;
+  --color-accent: #c67139;
+  --color-accent-2: #7a8a5e;
+  --color-gold: #c9952f;
+  --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
+  --color-scrim: color-mix(in srgb, #2e2b25 55%, transparent);
+
+  --color-neutral-100: #f9f4ed;
+  --color-neutral-200: #eee7db;
+  --color-neutral-300: #dcd3c4;
+  --color-neutral-400: #c0b6a5;
+  --color-neutral-500: #a19786;
+  --color-neutral-600: #82796a;
+  --color-neutral-700: #645c50;
+  --color-neutral-800: #474238;
+  --color-neutral-900: #2e2b25;
+
+  --color-accent-100: #fff2eb;
+  --color-accent-200: #ffe1d0;
+  --color-accent-300: #ffc6a5;
+  --color-accent-400: #f6a06b;
+  --color-accent-500: #d67f48;
+  --color-accent-600: #b2622d;
+  --color-accent-700: #8c491a;
+  --color-accent-800: #643312;
+  --color-accent-900: #402310;
+
+  --color-accent-2-100: #f0fae1;
+  --color-accent-2-200: #e1eecc;
+  --color-accent-2-300: #ccdbb2;
+  --color-accent-2-400: #aebf92;
+  --color-accent-2-500: #8fa073;
+  --color-accent-2-600: #728157;
+  --color-accent-2-700: #56633f;
+  --color-accent-2-800: #3d472b;
+  --color-accent-2-900: #272e1b;
+
+  --color-gold-100: #f7f5f0;
+  --color-gold-200: #efe9dc;
+  --color-gold-300: #e5d7bb;
+  --color-gold-400: #dbc08a;
+  --color-gold-500: #c9952f;
+  --color-gold-600: #ab7f28;
+  --color-gold-700: #7f5e1e;
+  --color-gold-800: #5e4516;
+  --color-gold-900: #423110;
+
+  --font-heading: "Caprasimo", Georgia, serif;
+  --font-heading-weight: 400;
+  --font-body: "Figtree", system-ui, -apple-system, sans-serif;
+
+  --space-1: 4.4px;  --space-2: 8.8px;  --space-3: 13.2px;
+  --space-4: 17.6px; --space-6: 26.4px; --space-8: 35.2px;
+
+  --radius-sm: 8px; --radius-md: 16px; --radius-lg: 28px;
+
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2e2b25 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2e2b25 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2e2b25 22%, transparent);
+
+  /* Semantic roles used by the app shell. */
+  /* The English line and its respelling are read as a pair, so they share one
+     size — changing it here keeps them matched everywhere. */
+  --gloss-size: 23px;
+  /* The foreground on --color-accent. Cream, as it always was here: this is
+     the v2 button, and restoring the palette means restoring it. The pair
+     measures 3.03:1 — it clears the large-text floor but not the 4.5 that
+     label-size text wants. Kept as a named token so the choice stays
+     visible and reviewable instead of being buried in nine rules. */
+  --on-accent: #f5ead8;
+  /* The original derivation, at 65% rather than 55%. At 55% it measured
+     3.57:1 on the cream ground — below AA for body text — and the extra
+     10% is imperceptible in reading while clearing 4.84:1. */
+  --ink-muted: color-mix(in srgb, var(--color-text) 65%, transparent);
+  --ink-faint: color-mix(in srgb, var(--color-text) 38%, transparent);
+  --press-shadow: rgba(0, 0, 0, .18);
+
+  /* ── The app mark ──────────────────────────────────────────────────────
+     The icon's four colours, and the only tokens in this file that are
+     deliberately NOT redefined for dark mode. An app icon is a fixed
+     asset: it is the same tile on a home screen, in a tab strip and on a
+     dark page, and a logo that inverts at night reads as a second logo.
+     The tile is the light theme's rust, held still. */
+  --mark-tile: #6f8055;     /* the sage ground the capybara sits on */
+  --mark-fur: #c67139;
+  --mark-ear: #a9572a;
+  --mark-muzzle: #ab6431;
+  --mark-ink: #2b1d13;      /* outline, pupils, nostrils, mouth */
+  --mark-light: #ffffff;    /* eyes and the two front teeth */
+}
+
+/* Dark theme — same roles, re-grounded. Applies on system preference unless the
+   user has explicitly chosen light, and always under an explicit dark choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #191715;
+    --color-surface: #221f1c;
+    --color-raised: #2b2723;
+    --color-text: #f2e9da;
+    --color-accent: #e08a4d;
+    --color-accent-2: #9db47c;
+    --color-gold: #d8a648;
+    --color-divider: color-mix(in srgb, #f2e9da 18%, transparent);
+    --color-scrim: color-mix(in srgb, #0b0a09 72%, transparent);
+
+    --color-neutral-100: #2b2723;
+    --color-neutral-200: #322e29;
+    --color-neutral-300: #3d3830;
+    --color-neutral-400: #564f45;
+    --color-neutral-500: #786f62;
+    --color-neutral-600: #9a9081;
+    --color-neutral-700: #bdb3a2;
+    --color-neutral-800: #ddd3c1;
+    --color-neutral-900: #f2e9da;
+
+    --color-accent-100: #2f1f14;
+    --color-accent-200: #45291a;
+    --color-accent-300: #5e3720;
+    --color-accent-400: #8a5028;
+    --color-accent-500: #b26a34;
+    --color-accent-600: #d08247;
+    --color-accent-700: #e8a069;
+    --color-accent-800: #f5c398;
+    --color-accent-900: #ffe1d0;
+
+    --color-accent-2-100: #1e2417;
+    --color-accent-2-200: #2b331f;
+    --color-accent-2-300: #3b4629;
+    --color-accent-2-400: #53613a;
+    --color-accent-2-500: #6d7d4d;
+    --color-accent-2-600: #8a9b66;
+    --color-accent-2-700: #a8b886;
+    --color-accent-2-800: #c6d3ab;
+    --color-accent-2-900: #e1eecc;
+
+    --color-gold-100: #2b2417;
+    --color-gold-200: #3e331e;
+    --color-gold-300: #5e4b26;
+    --color-gold-400: #9a7632;
+    --color-gold-500: #d8a648;
+    --color-gold-600: #deb464;
+    --color-gold-700: #cfa149;
+    --color-gold-800: #debe81;
+    --color-gold-900: #ead6af;
+
+    --on-accent: #191715;
+    --ink-muted: color-mix(in srgb, var(--color-text) 60%, transparent);
+    --ink-faint: color-mix(in srgb, var(--color-text) 38%, transparent);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
+    --shadow-md: 0 3px 10px rgba(0, 0, 0, .55);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, .62);
+    --press-shadow: rgba(0, 0, 0, .55);
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #191715;
+  --color-surface: #221f1c;
+  --color-raised: #2b2723;
+  --color-text: #f2e9da;
+  --color-accent: #e08a4d;
+  --color-accent-2: #9db47c;
+  --color-gold: #d8a648;
+  --color-divider: color-mix(in srgb, #f2e9da 18%, transparent);
+  --color-scrim: color-mix(in srgb, #0b0a09 72%, transparent);
+
+  --color-neutral-100: #2b2723;
+  --color-neutral-200: #322e29;
+  --color-neutral-300: #3d3830;
+  --color-neutral-400: #564f45;
+  --color-neutral-500: #786f62;
+  --color-neutral-600: #9a9081;
+  --color-neutral-700: #bdb3a2;
+  --color-neutral-800: #ddd3c1;
+  --color-neutral-900: #f2e9da;
+
+  --color-accent-100: #2f1f14;
+  --color-accent-200: #45291a;
+  --color-accent-300: #5e3720;
+  --color-accent-400: #8a5028;
+  --color-accent-500: #b26a34;
+  --color-accent-600: #d08247;
+  --color-accent-700: #e8a069;
+  --color-accent-800: #f5c398;
+  --color-accent-900: #ffe1d0;
+
+  --color-accent-2-100: #1e2417;
+  --color-accent-2-200: #2b331f;
+  --color-accent-2-300: #3b4629;
+  --color-accent-2-400: #53613a;
+  --color-accent-2-500: #6d7d4d;
+  --color-accent-2-600: #8a9b66;
+  --color-accent-2-700: #a8b886;
+  --color-accent-2-800: #c6d3ab;
+  --color-accent-2-900: #e1eecc;
+
+  --color-gold-100: #2b2417;
+  --color-gold-200: #3e331e;
+  --color-gold-300: #5e4b26;
+  --color-gold-400: #9a7632;
+  --color-gold-500: #d8a648;
+  --color-gold-600: #deb464;
+  --color-gold-700: #cfa149;
+  --color-gold-800: #debe81;
+  --color-gold-900: #ead6af;
+
+  --on-accent: #191715;
+  --ink-muted: color-mix(in srgb, var(--color-text) 60%, transparent);
+  --ink-faint: color-mix(in srgb, var(--color-text) 38%, transparent);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .5);
+  --shadow-md: 0 3px 10px rgba(0, 0, 0, .55);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, .62);
+  --press-shadow: rgba(0, 0, 0, .55);
+}

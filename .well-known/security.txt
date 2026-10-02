@@ -1,0 +1,7 @@
+# Pronuncia: cómo avisarnos de un fallo de seguridad.
+# How to report a security issue in Pronuncia (https://pronuncia.site).
+# Escríbenos en español o en inglés; respondemos en unos días.
+Contact: mailto:hola@pronuncia.site
+Expires: 2027-10-01T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://pronuncia.site/.well-known/security.txt
